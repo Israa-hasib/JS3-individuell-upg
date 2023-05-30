@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: poppins-regular, poppins;
+    background-color: #fff;
+    color: #363636;
+}
+
+.btn {
+    font-family: poppins-regular, poppins;
+    font-size: 1rem;
+    border: none;
+    outline-color: transparent;
+    cursor: pointer;
+}
+
+.old-price {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.spacing {
+    padding-bottom: 1.2rem;
+}

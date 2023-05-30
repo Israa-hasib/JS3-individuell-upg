@@ -1,0 +1,112 @@
+/* Login */
+.container-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#login {
+    background-color: #fff;
+    text-align: center;
+    width: 758px;
+    height: 60vh;
+    font-size: 13px;
+    margin-top: 50px;
+    border: 1px solid #000;
+    border-style: none;
+    margin-top: 10rem;
+
+    h1 {
+        padding-bottom: 3rem;
+    }
+    h3 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 12px;
+        font-weight: 80;
+        text-align: left;
+        color: #ff0000;
+        text-align: right;
+        margin-right: 28px;
+    }
+
+    input[type=email] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f6f6f6;
+        border-style: none;
+        height: 33px;
+        width: 708px;
+        outline: none;
+    }
+
+    input[type=password] {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        background-color: #f6f6f6;
+        border-style: none;
+        height: 33px;
+        width: 708px;
+        outline: none;
+    }
+
+    .checkbox {
+        margin-right: 560px;
+        border: none;
+    }
+
+    .btn-submit {
+        background-color: hsl(351, 95%, 59%);
+        border: none;
+        color: rgb(255, 255, 255);
+        padding: 10px 23px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        height: 33px;
+        width: 94px;
+        margin-top: 40px;
+        margin-right: 615px;
+        cursor: pointer;
+
+        &:hover {
+           background-color: hsl(351, 95%, 69%);
+           transition: ease 0.5ms;
+        }
+        &:active {
+           background-color: hsl(351, 95%, 49%);
+           transition: ease 0.5ms;
+        }
+    }
+
+
+    .no-account {
+        display: flex;
+        justify-content: flex-end;
+        width: 96%;
+    }
+
+    .email {
+        display: flex;
+        justify-content: center;
+        width: 13%;
+        font-size: 16px;
+    }
+
+    .password {
+        display: flex;
+        justify-content: flex-end;
+        width: 13%;
+        font-size: 16px;
+    }
+
+    #email,
+    #password {
+        height: 50px;
+    }
+
+
+}

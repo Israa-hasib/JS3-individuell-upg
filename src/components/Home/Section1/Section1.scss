@@ -1,0 +1,38 @@
+.home-section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 61.5%;
+    margin-bottom: 3.5rem;
+
+
+    h1 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+        letter-spacing: 3px;
+    }
+    h2 {
+        font-size: 4rem;
+        padding-bottom: .5rem;
+    }
+    img {
+        width: 625px;
+        height: 647px;
+        cursor: pointer;
+    }
+    .btn-shopnow {
+        padding: 1.2em 3em;
+        background-color: hsl(351, 95%, 59%);
+        color: #fff;
+        margin-top: 1.5rem;
+        letter-spacing: 3px;
+
+        &:hover {
+            background-color: hsl(351, 95%, 69%);
+        }
+        &:active {
+            background-color: hsl(351, 95%, 49%);
+        }
+    }
+}
