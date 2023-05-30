@@ -15,19 +15,6 @@ const Update = () => {
     const { id } = useParams()
     const { data: product, error, loading } = useDoc('products', id)
 
-    // console.log(product)
-
-
-    // const { user } = useSelector(state => state.auth)
-
-
-    // if (!user) return <Navigate to="/login" replace/>
-
-    // const dispatch = useDispatch()
-
-
-
-
     
     if (!product){
         return(

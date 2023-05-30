@@ -1,6 +1,5 @@
 import '../scssPages/productDetails.scss'
 import React from 'react'
-// import { FaCartPlus } from 'react-icons/fa'
 import useDoc from '../hooks/useDocs'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import Loader from '../components/Loader/Loader'
@@ -26,10 +25,7 @@ const ProductDetails = () => {
 //Update
  const handleChange = async () => {
   navigate('/Update')
-  // await updateDoc(doc(db,'products', product.id),)
 }
-
-
 
 
   if (!product) return (
