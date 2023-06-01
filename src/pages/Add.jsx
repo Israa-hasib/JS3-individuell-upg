@@ -2,15 +2,15 @@ import '../scssPages/add.scss'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addProduct } from '../store/features/products/productListSlice'
-import { Navigate } from 'react-router-dom'
+import { Navigate,useNavigate } from 'react-router-dom'
 
 
 const Add = () => {
 
     const { user } = useSelector(state => state.auth)
-
-
     if (!user) return <Navigate to="/login" replace/>
+
+    const navigate= useNavigate ()
 
     const dispatch = useDispatch()
     const [productData, setProductData] = useState({
@@ -35,10 +35,16 @@ const Add = () => {
         const data = {
             ...productData,
             price: +productData.price
-        }
+            
 
-        dispatch(addProduct(data)) //ta bort
+        }
+        navigate('/')
+
+       
+
+        dispatch(addProduct(data))
     }
+
 
     return (
         <div className='container-add'>

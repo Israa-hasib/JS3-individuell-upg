@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../scssPages/login.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -6,10 +6,12 @@ import { logInU } from '../store/features/auth/authSlice'
 
 const Login = () => {
 
-  const navi = useNavigate()
+  // const navi = useNavigate()
+  const navigate=useNavigate()
 
   const { user, loading, error } = useSelector(state => state.auth)
   const dispatch = useDispatch()
+  const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -26,8 +28,17 @@ const Login = () => {
   const handleSubmit = e => {
     e.preventDefault()
     dispatch(logInU(formData))
-    navi('/')
+    setSubmitted(true)
   }
+
+  useEffect(() => {
+    if(submitted && user) {
+      navigate('/')
+    }
+  }, [submitted, user])
+
+
+
 
   return (
     <div className="container-login">
@@ -37,7 +48,6 @@ const Login = () => {
             <h1>Please Login to Your Account</h1>
           </div>
           <div>
-            {/* <Link className='no-account' to={'/Registration'}>Don't have an Account yet?</Link> */}
             <label className='email' htmlFor="email">Email*</label>
             <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} />
           </div>
